@@ -3,7 +3,7 @@ from tests.api.base import Endpoint
 from tests import api
 
 
-class IcelandCard:
+class WeatherAPI:
     @staticmethod
     def call_weather_api():
         url = Endpoint.BASE_URL + api.ENDPOINT_WEATHER_API

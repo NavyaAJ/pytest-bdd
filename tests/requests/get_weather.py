@@ -1,15 +1,15 @@
 import logging
-import time
-from json import JSONDecodeError
+# import time
+# from json import JSONDecodeError
 
-from test.api.base import Endpoint
+from tests import api
+from tests.api.base import Endpoint
 
 
 class LondonWeather(Endpoint):
-    # ---------------------------------------- Add Journey---------------------------------------------------
     @staticmethod
-    def add_card(token, merchant, invalid_data=None):
+    def call_weather_api() -> str:
         url = Endpoint.BASE_URL + api.ENDPOINT_WEATHER_API
-        header = Endpoint.request_header(token)
-
+        logging.info(f"the url is", {url})
+        header = Endpoint.request_header()
         return Endpoint.call(url, header, "GET")

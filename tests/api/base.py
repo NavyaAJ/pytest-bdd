@@ -13,6 +13,7 @@ class Endpoint:
 
     @staticmethod
     def request_header(token=None, version="api_version"):
+        """As a part of auth, certain APIs needs token"""
         if version:
             accept = "application/json;v={}".format(version)
         else:
