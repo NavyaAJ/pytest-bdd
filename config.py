@@ -11,5 +11,5 @@ class EnvironmentDetails:
         self.base_url = base_url
 
     ENV = EnvironmentDetails(
-        base_url="https://api.dev.gb.bink.com",
+        base_url="https://weather.visualcrossing.com/",
     )
